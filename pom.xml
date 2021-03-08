@@ -50,7 +50,7 @@
         </dependency>
 
 
-         ***** ALICE BOT *****
+<!--         ***** ALICE BOT *****-->
         <dependency>
             <artifactId>com.google</artifactId>
             <groupId>Ab</groupId>
