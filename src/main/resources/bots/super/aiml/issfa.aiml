@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>*</pattern>
+            <template>
+              <random>
+                <li>Disculpe no se encuentra registrado. Por favor, escríbeme nuevamente y te atenderé con mucho gusto.</li>
+                <li>Disculpe no se encuentra registrado. Por favor, escríbeme nuevamente y te atenderé con mucho gusto.</li>
+                <li>No entendí tu requerimiento. Por favor, escríbeme nuevamente y te atenderé con mucho gusto.</li>
+                <li>No entendí tu requerimiento. Por favor, escríbeme nuevamente y te atenderé con mucho gusto.</li>
+            </random>
+        </template>
+    </category>
+  
+    <category>
+       <pattern>como te llamas</pattern>
+        <template>
+			<random>
+				<li>me llamo ISSFA</li>
+				<li>ISSFA</li>
+			</random>
+        </template>
+    </category>
+  
+    <category>
+       <pattern>_ como te llamas</pattern>
+        <template>
+			<random>
+				<li>me llamo ISSFA</li>
+				<li>ISSFA</li>
+			</random>
+        </template>
+    </category>
+  
+    <category>
+       <pattern>como te llamas *</pattern>
+        <template>
+			<random>
+				<li>me llamo ISSFA</li>
+				<li>ISSFA</li>
+			</random>
+        </template>
+    </category>
+  
+    <category>
+       <pattern>_ como te llamas *</pattern>
+        <template>
+			<random>
+				<li>me llamo ISSFA</li>
+				<li>ISSFA</li>
+			</random>
+        </template>
+    </category>
+
+
+      <category>
+          <pattern>Cuál es el monto de mi cuota a cancelar</pattern>
+          <template>$248.95</template>
+      </category>
+
+      <category>
+          <pattern>_ Cuál es el monto de mi cuota a cancelar</pattern>
+          <template>$248.95</template>
+      </category>
+
+      <category>
+          <pattern>Cuál es el monto de mi cuota a cancelar *</pattern>
+          <template>$248.95</template>
+      </category>
+
+      <category>
+            <pattern>_ Cuál es el monto de mi cuota a cancelar *</pattern>
+            <template>$248.95</template>
+      </category>
+
+      <category>
+          <pattern>Cual es el monto de mi cuota a cancelar</pattern>
+          <template>$248.95</template>
+      </category>
+
+      <category>
+          <pattern>_ Cual es el monto de mi cuota a cancelar</pattern>
+          <template>$248.95</template>
+      </category>
+
+      <category>
+          <pattern>Cual es el monto de mi cuota a cancelar *</pattern>
+          <template>$248.95</template>
+      </category>
+
+      <category>
+            <pattern>_ Cual es el monto de mi cuota a cancelar *</pattern>
+            <template>$248.95</template>
+      </category>
+
+    <category>
+          <pattern>Cuál es el saldo total de mi préstamo</pattern>
+          <template>$2,453.56</template>
+      </category>
+
+    <category>
+        <pattern>_ Cuál es el saldo total de mi préstamo</pattern>
+        <template>$2,453.56</template>
+    </category>
+
+    <category>
+      <pattern>Cuál es el saldo total de mi préstamo *</pattern>
+      <template>$2,453.56</template>
+    </category>
+
+    <category>
+        <pattern>_ Cuál es el saldo total de mi préstamo *</pattern>
+        <template>$2,453.56</template>
+    </category>
+
+      <category>
+          <pattern>Cual es el saldo total de mi prestamo</pattern>
+          <template>$2,453.56</template>
+      </category>
+
+    <category>
+        <pattern>_ Cual es el saldo total de mi prestamo</pattern>
+        <template>$2,453.56</template>
+    </category>
+
+    <category>
+      <pattern>Cual es el saldo total de mi prestamo *</pattern>
+      <template>$2,453.56</template>
+    </category>
+
+    <category>
+        <pattern>_ Cual es el saldo total de mi prestamo *</pattern>
+        <template>$2,453.56</template>
+    </category>
+
+      <category>
+          <pattern>Que tipos de credito existe</pattern>
+          <template>
+                Credito Tipo 1 </br>
+                Credito Tipo 2 </br>
+                Credito TIpo 3 </br>
+          </template>
+      </category>
+
+      <category>
+        <pattern>_ Que tipos de credito existe</pattern>
+        <template>
+              Credito Tipo 1 </br>
+              Credito Tipo 2 </br>
+              Credito TIpo 3 </br>
+        </template>
+      </category>
+
+      <category>
+          <pattern>Que tipos de credito existe *</pattern>
+          <template>
+                Credito Tipo 1 </br>
+                Credito Tipo 2 </br>
+                Credito TIpo 3 </br>
+          </template>
+      </category>
+
+      <category>
+          <pattern>_ Que tipos de credito existe *</pattern>
+          <template>
+                Credito Tipo 1 </br>
+                Credito Tipo 2 </br>
+                Credito TIpo 3 </br>
+          </template>
+      </category>
+
+      <category>
+                <pattern>Que tipos de crédito existe?</pattern>
+                <template>
+                      Credito Tipo 1 </br>
+                      Credito Tipo 2 </br>
+                      Credito TIpo 3 </br>
+                </template>
+            </category>
+
+            <category>
+              <pattern>_ Que tipos de crédito existe?</pattern>
+              <template>
+                    Credito Tipo 1 </br>
+                    Credito Tipo 2 </br>
+                    Credito TIpo 3 </br>
+              </template>
+            </category>
+
+            <category>
+                <pattern>Que tipos de crédito existe? *</pattern>
+                <template>
+                      Credito Tipo 1 </br>
+                      Credito Tipo 2 </br>
+                      Credito TIpo 3 </br>
+                </template>
+            </category>
+
+            <category>
+                <pattern>_ Que tipos de crédito existe? *</pattern>
+                <template>
+                      Credito Tipo 1 </br>
+                      Credito Tipo 2 </br>
+                      Credito TIpo 3 </br>
+                </template>
+            </category>
+
+      <category>
+        <pattern>De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder</pattern>
+        <template>
+                Credito Tipo 3
+                <button> Prueba </button>
+        </template>
+      </category>
+
+      <category>
+        <pattern>_ De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder</pattern>
+        <template>
+                Credito Tipo 3
+                <button> Prueba </button>
+        </template>
+      </category>
+
+      <category>
+        <pattern>De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder *</pattern>
+        <template>
+                Credito Tipo 3
+                <button> Prueba </button>
+        </template>
+      </category>
+
+      <category>
+        <pattern>_ De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder *</pattern>
+        <template>
+                Credito Tipo 3
+                <button> Prueba </button>
+        </template>
+      </category>
+
+      <category>
+              <pattern>De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder</pattern>
+              <template>
+                      Credito Tipo 3
+                      <button> Prueba </button>
+              </template>
+            </category>
+
+            <category>
+              <pattern>_ De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder</pattern>
+              <template>
+                      Credito Tipo 3
+                      <button> Prueba </button>
+              </template>
+            </category>
+
+            <category>
+              <pattern>De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder *</pattern>
+              <template>
+                      Credito Tipo 3
+                      <button> Prueba </button>
+              </template>
+            </category>
+
+            <category>
+              <pattern>_ De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder *</pattern>
+              <template>
+                      Credito Tipo 3
+                      <button> Prueba </button>
+              </template>
+            </category>
+
+</aiml>

@@ -1,0 +1,37 @@
+0,*,*,*,<random>#Newline        <li>Disculpe no se encuentra registrado. Por favor escríbeme nuevamente y te atenderé con mucho gusto.</li>#Newline        <li>Disculpe no se encuentra registrado. Por favor escríbeme nuevamente y te atenderé con mucho gusto</li>#Newline        <li>No entendí tu requerimiento. Por favor escríbeme nuevamente y te atenderé con mucho gusto.</li>#Newline        <li>No entendí tu requerimiento. Por favor escríbeme nuevamente y te atenderé con mucho gusto.</li>#Newline      </random>,default.aiml
+0,COMO TE LLAMAS,*,*,<random>#Newline				<li>me llamo ISSFA</li>#Newline				<li>ISSFA</li>#Newline			</random>,default.aiml
+0,_ COMO TE LLAMAS,*,*,<random>#Newline				<li>me llamo ISSFA</li>#Newline				<li>ISSFA</li>#Newline			</random>,default.aiml
+0,COMO TE LLAMAS *,*,*,<random>#Newline				<li>me llamo ISSFA</li>#Newline				<li>ISSFA</li>#Newline			</random>,default.aiml
+0,_ COMO TE LLAMAS *,*,*,<random>#Newline				<li>me llamo ISSFA</li>#Newline				<li>ISSFA</li>#Newline			</random>,default.aiml
+0,CUAL ES EL MONTO DE MI CUOTA A CANCELAR,*,*, $248.95 <br/>,default.aiml
+0,_ CUAL ES EL MONTO DE MI CUOTA A CANCELAR,*,*, $248.95 <br/>,default.aiml
+0,CUAL ES EL MONTO DE MI CUOTA A CANCELAR *,*,*, $248.95 <br/>,default.aiml
+0,_ CUAL ES EL MONTO DE MI CUOTA A CANCELAR *,*,*, $248.95 <br/>,default.aiml
+0,CUÁL ES EL MONTO DE MI CUOTA A CANCELAR,*,*, $248.95 <br/>,default.aiml
+0,_ CUAL ES EL MONTO DE MI CUOTA A CANCELAR,*,*, $248.95 <br/>,default.aiml
+0,CUAL ES EL MONTO DE MI CUOTA A CANCELAR *,*,*, $248.95 <br/>,default.aiml
+0,_ CUAL ES EL MONTO DE MI CUOTA A CANCELAR *,*,*, $248.95 <br/>,default.aiml
+0,CUAL ES EL SALDO TOTAL DE MI PRESTAMO,*,*, $2453.56 <br/>,default.aiml
+0,_ CUAL ES EL SALDO TOTAL DE MI PRESTAMO,*,*, $2453.56 <br/>,default.aiml
+0,CUAL ES EL SALDO TOTAL DE MI PRESTAMO *,*,*, $2453.56 <br/>,default.aiml
+0,_ CUAL ES EL SALDO TOTAL DE MI PRESTAMO *,*,*, $2453.56 <br/>,default.aiml
+0,CUÁL ES EL SALDO TOTAL DE MI PRÉSTAMO,*,*, $2453.56 <br/>,default.aiml
+0,_ CUÁL ES EL SALDO TOTAL DE MI PRÉSTAMO,*,*, $2453.56 <br/>,default.aiml
+0,CUÁL ES EL SALDO TOTAL DE MI PRÉSTAMO *,*,*, $2453.56 <br/>,default.aiml
+0,_ CUÁL ES EL SALDO TOTAL DE MI PRÉSTAMO *,*,*, $2453.56 <br/>,default.aiml
+0,QUE TIPOS DE CREDITO EXISTE,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,_ QUE TIPOS DE CREDITO EXISTE,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,QUE TIPOS DE CREDITO EXISTE *,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,_ QUE TIPOS DE CREDITO EXISTE *,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,QUE TIPOS DE CRÉDITO EXISTE,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,_ QUE TIPOS DE CRÉDITO EXISTE,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,QUE TIPOS DE CRÉDITO EXISTE *,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,_ QUE TIPOS DE CRÉDITO EXISTE *,*,*, Credito Tipo 1 <br/><br/> Credito Tipo 2 <br/><br/>Credito Tipo 3,default.aiml
+0,DE ACUERDO A MI NIVEL DE INGRESO A QUE TIPO DE CREDITO PUEDO ACCEDER,*,*, Credito Tipo 3 <br/>,default.aiml
+0,_ DE ACUERDO A MI NIVEL DE INGRESO A QUE TIPO DE CREDITO PUEDO ACCEDER,*,*, Credito Tipo 3 <br/>,default.aiml
+0,DE ACUERDO A MI NIVEL DE INGRESO A QUE TIPO DE CREDITO PUEDO ACCEDER *,*,*, Credito Tipo 3 <br/>,default.aiml
+0,_ DE ACUERDO A MI NIVEL DE INGRESO A QUE TIPO DE CREDITO PUEDO ACCEDER *,*,*, Credito Tipo 3 <br/>,default.aiml
+0,DE ACUERDO A MI NIVEL DE INGRESO A QUÉ TIPO DE CRÉDITO PUEDO ACCEDER,*,*, Credito Tipo 3 <br/>,default.aiml
+0,_ DE ACUERDO A MI NIVEL DE INGRESO A QUÉ TIPO DE CRÉDITO PUEDO ACCEDER,*,*, Credito Tipo 3 <br/>,default.aiml
+0,DE ACUERDO A MI NIVEL DE INGRESO A QUÉ TIPO DE CRÉDITO PUEDO ACCEDER *,*,*, Credito Tipo 3 <br/>,default.aiml
+0,_ DE ACUERDO A MI NIVEL DE INGRESO A QUÉ TIPO DE CRÉDITO PUEDO ACCEDER *,*,*, Credito Tipo 3 <br/>,default.aiml
