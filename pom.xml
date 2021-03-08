@@ -51,14 +51,14 @@
 
 
 <!--         ***** ALICE BOT *****-->
-        <dependency>
-            <artifactId>com.google</artifactId>
-            <groupId>Ab</groupId>
-            <version>0.0.4.3</version>
-<!--             <scope>system</scope>-->
-<!--            <systemPath>${basedir}/lib/Ab.jar</systemPath>-->
-<!--            <optional>true</optional>-->
-        </dependency>
+<!--        <dependency>-->
+<!--            <artifactId>com.google</artifactId>-->
+<!--            <groupId>Ab</groupId>-->
+<!--            <version>0.0.4.3</version>-->
+<!--&lt;!&ndash;             <scope>system</scope>&ndash;&gt;-->
+<!--&lt;!&ndash;            <systemPath>${basedir}/lib/Ab.jar</systemPath>&ndash;&gt;-->
+<!--&lt;!&ndash;            <optional>true</optional>&ndash;&gt;-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
