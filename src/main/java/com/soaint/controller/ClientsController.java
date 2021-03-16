@@ -318,16 +318,16 @@ public class ClientsController {
         if(clientsService.existePorEmailPrivado(acClientsPrivate.getEmail()))
             return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
 
-        AcClientsPrivate acClientsPrivate1 =
-                new AcClientsPrivate(
-                        acClientsPrivate.getEmail(),
-                        passwordEncoder.encode(acClientsPrivate.getPassword()),
-                        acClientsPrivate.getId_country(),
-                        acClientsPrivate.getCreated_at());
+//        AcClientsPrivate acClientsPrivate1 =
+//                new AcClientsPrivate(
+//                        acClientsPrivate.getEmail(),
+//                        passwordEncoder.encode(acClientsPrivate.getPassword()),
+//                        acClientsPrivate.getId_country(),
+//                        acClientsPrivate.getCreated_at());
 
 
-        clientsService.savePrivado(acClientsPrivate1);
-        return new ResponseEntity(acClientsPrivate1, HttpStatus.CREATED);
+        clientsService.savePrivado(acClientsPrivate);
+        return new ResponseEntity(acClientsPrivate, HttpStatus.CREATED);
     }
 
     //ACTUALIZA UN CLIENTE PRIVADO
@@ -342,9 +342,9 @@ public class ClientsController {
                 clientsService.getByEmailPrivado(acClientsPrivate.getEmail()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
         AcClientsPrivate acClientsPrivateUpdate = clientsService.obtenerPorIdPrivate(id).get();
-        acClientsPrivateUpdate.setEmail(acClientsPrivate.getEmail());
-        acClientsPrivateUpdate.setId_country(acClientsPrivate.getId_country());
-        acClientsPrivateUpdate.setPassword(passwordEncoder.encode(acClientsPrivate.getPassword()));
+//        acClientsPrivateUpdate.setEmail(acClientsPrivate.getEmail());
+//        acClientsPrivateUpdate.setId_country(acClientsPrivate.getId_country());
+//        acClientsPrivateUpdate.setPassword(passwordEncoder.encode(acClientsPrivate.getPassword()));
         clientsService.savePrivado(acClientsPrivateUpdate);
 
         return new ResponseEntity(new Mensaje("Cliente Privado actualizado"), HttpStatus.CREATED);

@@ -52,7 +52,8 @@ public class ChatBotController {
             @ApiParam(value = "id_client_public" , required = false) AcClients client) {
 
         Date dateQuestion = new Date();
-        String x = chatBotService.chatbotService(question);
+        Object objClient = client;
+        String x = chatBotService.chatbotService(question, objClient);
         Date dateResponse = new Date();
 
         CbHistorial chat = new CbHistorial();
@@ -75,7 +76,7 @@ public class ChatBotController {
             @ApiParam(value = "id_client_public" , required = false) AcClientsPrivate client) {
 
         Date dateQuestion = new Date();
-        String x = chatBotService.chatbotService(question);
+        String x = chatBotService.chatbotService(question, "");
         Date dateResponse = new Date();
 
         CbHistorial chat = new CbHistorial();

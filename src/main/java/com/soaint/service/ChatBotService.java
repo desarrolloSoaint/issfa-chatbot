@@ -39,8 +39,10 @@ public class ChatBotService {
     static String botName = "super";
     private Object ArrayList;
 
-    public String chatbotService(String answer){
+    public String chatbotService(String answer, Object obj){
         String response = "";
+
+        System.out.println("AQUI: " + obj);
 
         try{
             String resourcePath = getResourcePath();

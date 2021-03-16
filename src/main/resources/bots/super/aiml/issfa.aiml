@@ -54,219 +54,635 @@
 
 
       <category>
-          <pattern>Cuál es el monto de mi cuota a cancelar</pattern>
-          <template>$248.95</template>
-      </category>
-
-      <category>
-          <pattern>_ Cuál es el monto de mi cuota a cancelar</pattern>
-          <template>$248.95</template>
-      </category>
-
-      <category>
-          <pattern>Cuál es el monto de mi cuota a cancelar *</pattern>
-          <template>$248.95</template>
-      </category>
-
-      <category>
-            <pattern>_ Cuál es el monto de mi cuota a cancelar *</pattern>
-            <template>$248.95</template>
-      </category>
-
-      <category>
-          <pattern>Cual es el monto de mi cuota a cancelar</pattern>
-          <template>$248.95</template>
-      </category>
-
-      <category>
-          <pattern>_ Cual es el monto de mi cuota a cancelar</pattern>
-          <template>$248.95</template>
-      </category>
-
-      <category>
-          <pattern>Cual es el monto de mi cuota a cancelar *</pattern>
-          <template>$248.95</template>
-      </category>
-
-      <category>
-            <pattern>_ Cual es el monto de mi cuota a cancelar *</pattern>
-            <template>$248.95</template>
-      </category>
-
-    <category>
-          <pattern>Cuál es el saldo total de mi préstamo</pattern>
-          <template>$2,453.56</template>
-      </category>
-
-    <category>
-        <pattern>_ Cuál es el saldo total de mi préstamo</pattern>
-        <template>$2,453.56</template>
-    </category>
-
-    <category>
-      <pattern>Cuál es el saldo total de mi préstamo *</pattern>
-      <template>$2,453.56</template>
-    </category>
-
-    <category>
-        <pattern>_ Cuál es el saldo total de mi préstamo *</pattern>
-        <template>$2,453.56</template>
-    </category>
-
-      <category>
-          <pattern>Cual es el saldo total de mi prestamo</pattern>
-          <template>$2,453.56</template>
-      </category>
-
-    <category>
-        <pattern>_ Cual es el saldo total de mi prestamo</pattern>
-        <template>$2,453.56</template>
-    </category>
-
-    <category>
-      <pattern>Cual es el saldo total de mi prestamo *</pattern>
-      <template>$2,453.56</template>
-    </category>
-
-    <category>
-        <pattern>_ Cual es el saldo total de mi prestamo *</pattern>
-        <template>$2,453.56</template>
-    </category>
-
-      <category>
-          <pattern>Que tipos de credito existe</pattern>
+          <pattern>Cuándo podría renovar mi crédito</pattern>
           <template>
-                Credito Tipo 1 </br>
-                Credito Tipo 2 </br>
-                Credito TIpo 3 </br>
+                10/10/2021<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuándo termina de cancelar el crédito     <br/>
+                * Número de cuotas pendientes               <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
           </template>
       </category>
 
       <category>
-        <pattern>_ Que tipos de credito existe</pattern>
-        <template>
-              Credito Tipo 1 </br>
-              Credito Tipo 2 </br>
-              Credito TIpo 3 </br>
+          <pattern>_ Cuándo podría renovar mi crédito</pattern>
+          <template>
+                  10/10/2021<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuál es mi saldo de mi crédito activo     <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+          <pattern>Cuándo podría renovar mi crédito *</pattern>
+          <template>
+                  10/10/2021<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuál es mi saldo de mi crédito activo     <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+            <pattern>_ Cuándo podría renovar mi crédito *</pattern>
+            <template>
+                    10/10/2021<br/><br/>
+
+                    <u>Módulo de créditos</u>                   <br/><br/>
+                    * Cuál es mi saldo de mi crédito activo     <br/>
+                    * Cuándo termina de cancelar el crédito     <br/>
+                    * Número de cuotas pendientes               <br/>
+                    * Número de créditos vigentes               <br/>
+                    * Cuándo podría realizar un nuevo crédito
+              </template>
+      </category>
+
+      <category>
+          <pattern>Cuando podria renovar mi credito</pattern>
+          <template>
+                  10/10/2021<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuál es mi saldo de mi crédito activo     <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+          <pattern>_ Cuando podria renovar mi credito</pattern>
+          <template>
+                  10/10/2021<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuál es mi saldo de mi crédito activo     <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+          <pattern>Cuando podria renovar mi credito *</pattern>
+          <template>
+              10/10/2021<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Cuándo termina de cancelar el crédito     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
         </template>
       </category>
 
       <category>
-          <pattern>Que tipos de credito existe *</pattern>
-          <template>
-                Credito Tipo 1 </br>
-                Credito Tipo 2 </br>
-                Credito TIpo 3 </br>
+            <pattern>_ Cuando podria renovar mi credito *</pattern>
+            <template>
+                10/10/2021<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuándo termina de cancelar el crédito     <br/>
+                * Número de cuotas pendientes               <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
           </template>
       </category>
 
       <category>
-          <pattern>_ Que tipos de credito existe *</pattern>
-          <template>
-                Credito Tipo 1 </br>
-                Credito Tipo 2 </br>
-                Credito TIpo 3 </br>
+          <pattern>Cuál es mi saldo de mi crédito activo</pattern>
+          <template>0<br/><br/>
+
+                 <u>Módulo de créditos</u>                   <br/><br/>
+                 * Cuando podria renovar mi credito          <br/>
+                 * Cuándo termina de cancelar el crédito     <br/>
+                 * Número de cuotas pendientes               <br/>
+                 * Número de créditos vigentes               <br/>
+                 * Cuándo podría realizar un nuevo crédito
+           </template>
+      </category>
+
+      <category>
+          <pattern>_ Cuál es mi saldo de mi crédito activo</pattern>
+          <template>0<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuando podria renovar mi credito          <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+          <pattern>Cuál es mi saldo de mi crédito activo *</pattern>
+          <template>0<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuando podria renovar mi credito          <br/>
+              * Cuándo termina de cancelar el crédito     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+      </category>
+
+      <category>
+            <pattern>_ Cuál es mi saldo de mi crédito activo *</pattern>
+            <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuando podria renovar mi credito          <br/>
+                * Cuándo termina de cancelar el crédito     <br/>
+                * Número de cuotas pendientes               <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
           </template>
       </category>
 
       <category>
-                <pattern>Que tipos de crédito existe?</pattern>
-                <template>
-                      Credito Tipo 1 </br>
-                      Credito Tipo 2 </br>
-                      Credito TIpo 3 </br>
-                </template>
-            </category>
+          <pattern>Cual es mi saldo de mi credito activo</pattern>
+          <template>0<br/><br/>
 
-            <category>
-              <pattern>_ Que tipos de crédito existe?</pattern>
-              <template>
-                    Credito Tipo 1 </br>
-                    Credito Tipo 2 </br>
-                    Credito TIpo 3 </br>
-              </template>
-            </category>
-
-            <category>
-                <pattern>Que tipos de crédito existe? *</pattern>
-                <template>
-                      Credito Tipo 1 </br>
-                      Credito Tipo 2 </br>
-                      Credito TIpo 3 </br>
-                </template>
-            </category>
-
-            <category>
-                <pattern>_ Que tipos de crédito existe? *</pattern>
-                <template>
-                      Credito Tipo 1 </br>
-                      Credito Tipo 2 </br>
-                      Credito TIpo 3 </br>
-                </template>
-            </category>
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuando podria renovar mi credito          <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
 
       <category>
-        <pattern>De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder</pattern>
-        <template>
-                Credito Tipo 3
-                <button> Prueba </button>
+          <pattern>_ Cual es mi saldo de mi credito activo</pattern>
+          <template>0<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuando podria renovar mi credito          <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+          <pattern>Cual es mi saldo de mi credito activo *</pattern>
+          <template>0<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuando podria renovar mi credito          <br/>
+                  * Cuándo termina de cancelar el crédito     <br/>
+                  * Número de cuotas pendientes               <br/>
+                  * Número de créditos vigentes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+            <pattern>_ Cual es mi saldo de mi credito activo *</pattern>
+            <template>0<br/><br/>
+
+                    <u>Módulo de créditos</u>                   <br/><br/>
+                    * Cuando podria renovar mi credito          <br/>
+                    * Cuándo termina de cancelar el crédito     <br/>
+                    * Número de cuotas pendientes               <br/>
+                    * Número de créditos vigentes               <br/>
+                    * Cuándo podría realizar un nuevo crédito
+              </template>
+      </category>
+
+    <category>
+          <pattern>Cuándo termina de cancelar el crédito</pattern>
+          <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+      </category>
+
+    <category>
+        <pattern>_ Cuándo termina de cancelar el crédito</pattern>
+        <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+    </category>
+
+    <category>
+      <pattern>Cuándo termina de cancelar el crédito *</pattern>
+        <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ Cuándo termina de cancelar el crédito *</pattern>
+        <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+    </category>
+
+      <category>
+          <pattern>Cuando termina de cancelar el credito</pattern>
+        <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+      </category>
+
+    <category>
+        <pattern>_ Cuando termina de cancelar el credito</pattern>
+        <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+    </category>
+
+    <category>
+      <pattern>Cuando termina de cancelar el credito *</pattern>
+        <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ Cuando termina de cancelar el credito *</pattern>
+        <template>No tiene créditos activos<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Número de cuotas pendientes               <br/>
+              * Número de créditos vigentes               <br/>
+              * Cuándo podría realizar un nuevo crédito
+        </template>
+    </category>
+
+      <category>
+          <pattern>Número de cuotas pendientes</pattern>
+          <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+      </category>
+
+    <category>
+        <pattern>_ Número de cuotas pendientes</pattern>
+        <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+    </category>
+
+    <category>
+      <pattern>Número de cuotas pendientes *</pattern>
+        <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+    </category>
+
+    <category>
+        <pattern>_ Número de cuotas pendientes *</pattern>
+        <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+    </category>
+
+          <category>
+              <pattern>Numero de cuotas pendientes</pattern>
+            <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+          </category>
+
+        <category>
+            <pattern>_ Numero de cuotas pendientes</pattern>
+            <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+        </category>
+
+        <category>
+          <pattern>Numero de cuotas pendientes *</pattern>
+            <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+        </category>
+
+        <category>
+            <pattern>_ Numero de cuotas pendientes *</pattern>
+            <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Número de créditos vigentes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+        </category>
+
+      <category>
+          <pattern>Número de créditos vigentes</pattern>
+         <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+      </category>
+
+      <category>
+        <pattern>_ Número de créditos vigentes</pattern>
+        <template>0<br/><br/>
+
+            <u>Módulo de créditos</u>                   <br/><br/>
+            * Cuándo podría renovar mi crédito          <br/>
+            * Cuál es mi saldo de mi crédito activo     <br/>
+            * Cuando termina de cancelar el credito     <br/>
+            * Numero de cuotas pendientes               <br/>
+            * Cuándo podría realizar un nuevo crédito
+      </template>
+      </category>
+
+      <category>
+          <pattern>Número de créditos vigentes *</pattern>
+          <template>0<br/><br/>
+
+                  <u>Módulo de créditos</u>                   <br/><br/>
+                  * Cuándo podría renovar mi crédito          <br/>
+                  * Cuál es mi saldo de mi crédito activo     <br/>
+                  * Cuando termina de cancelar el credito     <br/>
+                  * Numero de cuotas pendientes               <br/>
+                  * Cuándo podría realizar un nuevo crédito
+            </template>
+      </category>
+
+      <category>
+          <pattern>_ Número de créditos vigentes *</pattern>
+          <template>0<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Cuando termina de cancelar el credito     <br/>
+              * Numero de cuotas pendientes               <br/>
+              * Cuándo podría realizar un nuevo crédito
         </template>
       </category>
 
       <category>
-        <pattern>_ De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder</pattern>
-        <template>
-                Credito Tipo 3
-                <button> Prueba </button>
+          <pattern>Numero de creditos vigentes</pattern>
+          <template>0<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Cuando termina de cancelar el credito     <br/>
+              * Numero de cuotas pendientes               <br/>
+              * Cuándo podría realizar un nuevo crédito
         </template>
       </category>
 
       <category>
-        <pattern>De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder *</pattern>
-        <template>
-                Credito Tipo 3
-                <button> Prueba </button>
+        <pattern>_ Numero de creditos vigentes</pattern>
+        <template>0<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Cuándo podría realizar un nuevo crédito
+          </template>
+      </category>
+
+      <category>
+          <pattern>Numero de creditos vigentes *</pattern>
+          <template>0<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Cuando termina de cancelar el credito     <br/>
+              * Numero de cuotas pendientes               <br/>
+              * Cuándo podría realizar un nuevo crédito
         </template>
       </category>
 
       <category>
-        <pattern>_ De acuerdo a mi nivel de ingreso a que tipo de credito puedo acceder *</pattern>
-        <template>
-                Credito Tipo 3
-                <button> Prueba </button>
+          <pattern>_ Numero de creditos vigentes *</pattern>
+          <template>0<br/><br/>
+
+              <u>Módulo de créditos</u>                   <br/><br/>
+              * Cuándo podría renovar mi crédito          <br/>
+              * Cuál es mi saldo de mi crédito activo     <br/>
+              * Cuando termina de cancelar el credito     <br/>
+              * Numero de cuotas pendientes               <br/>
+              * Cuándo podría realizar un nuevo crédito
         </template>
       </category>
 
-      <category>
-              <pattern>De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder</pattern>
-              <template>
-                      Credito Tipo 3
-                      <button> Prueba </button>
-              </template>
-            </category>
+        <category>
+            <pattern>Cuándo podría realizar un nuevo crédito</pattern>
+            <template>5-25 de cada mes<br/><br/>
 
-            <category>
-              <pattern>_ De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder</pattern>
-              <template>
-                      Credito Tipo 3
-                      <button> Prueba </button>
-              </template>
-            </category>
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
 
-            <category>
-              <pattern>De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder *</pattern>
-              <template>
-                      Credito Tipo 3
-                      <button> Prueba </button>
-              </template>
-            </category>
+        <category>
+            <pattern>_ Cuándo podría realizar un nuevo crédito</pattern>
+            <template>5-25 de cada mes<br/><br/>
 
-            <category>
-              <pattern>_ De acuerdo a mi nivel de ingreso a qué tipo de crédito puedo acceder *</pattern>
-              <template>
-                      Credito Tipo 3
-                      <button> Prueba </button>
-              </template>
-            </category>
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
+
+        <category>
+            <pattern>Cuándo podría realizar un nuevo crédito *</pattern>
+            <template>5-25 de cada mes<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
+
+        <category>
+            <pattern>_ Cuándo podría realizar un nuevo crédito *</pattern>
+            <template>5-25 de cada mes<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
+
+        <category>
+            <pattern>Cuando podria realizar un nuevo credito</pattern>
+            <template>5-25 de cada mes<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
+
+        <category>
+            <pattern>_ Cuándo podría realizar un nuevo credito</pattern>
+            <template>5-25 de cada mes<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
+
+        <category>
+            <pattern>Cuándo podría realizar un nuevo credito *</pattern>
+            <template>5-25 de cada mes<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
+
+        <category>
+            <pattern>_ Cuando podria realizar un nuevo credito *</pattern>
+            <template>5-25 de cada mes<br/><br/>
+
+                <u>Módulo de créditos</u>                   <br/><br/>
+                * Cuándo podría renovar mi crédito          <br/>
+                * Cuál es mi saldo de mi crédito activo     <br/>
+                * Cuando termina de cancelar el credito     <br/>
+                * Numero de cuotas pendientes               <br/>
+                * Numero de creditos vigentes
+            </template>
+        </category>
 
 </aiml>

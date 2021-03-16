@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-    <category>
+      <category>
         <pattern>*</pattern>
         <template>
           <random>
-            <li>Disculpa pero no comprendo tu pregunta pero Puedo hablarte de los productos Soaint si quieres?</li>
-            <li>Disculpa pero no comprendo tu pregunta aunque Puedo darte informacion acerca de Arquitectura Empresarial?</li>
-            <li>Disculpa pero no comprendo la pregunta pero Puedo darte informacion acerca de RPA?</li>
-            <li>Puedo darte informacion acerca de Microservicios? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de BPM?  es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de Oracle? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de Gestion Documental? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de Customer Experience? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de Proteccion contra el Fraude? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de SOADOC? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de SOA? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de ESB? es que no comprendo tu pregunta</li>
-            <li>Puedo darte informacion acerca de API? es que no comprendo tu pregunta</li>
-            <li>No comprendo la pregunta sin embargo Puedo darte informacion acerca de Transformacion Digital?</li>
+            <li>Disculpa pero no comprendo tu pregunta, para mas informacion consulte nuestra pagina web <a href="https://www.issfa.mil.ec/" target="_blank"> www.issfa.mil.ec</a></li>
           </random>
         </template>
       </category>
+
+      <category>
+        <pattern>servicios</pattern>
+        <template>
+          <random>
+            <li>Para más información consulte nuestra página web <a href="https://www.issfa.mil.ec/" target="_blank"> www.issfa.mil.ec</a></li>
+          </random>
+        </template>
+      </category>
+
+      <category>
+          <pattern>_ servicios</pattern>
+          <template>
+            <random>
+              <li>Para más información consulte nuestra página web <a href="https://www.issfa.mil.ec/" target="_blank"> www.issfa.mil.ec</a></li>
+            </random>
+          </template>
+        </category>
+
+        <category>
+            <pattern>servicios *</pattern>
+            <template>
+              <random>
+                <li>Para más información consulte nuestra página web <a href="https://www.issfa.mil.ec/" target="_blank"> www.issfa.mil.ec</a></li>
+              </random>
+            </template>
+          </category>
+
+          <category>
+              <pattern>_ servicios *</pattern>
+              <template>
+                <random>
+                  <li>Para más información consulte nuestra página web <a href="https://www.issfa.mil.ec/" target="_blank"> www.issfa.mil.ec</a></li>
+                </random>
+              </template>
+            </category>
 
       <category>
               <pattern>QUIERO HABLAR CON *</pattern>
@@ -455,156 +478,7 @@
                             </template>
                        </category>
 
-              <category>
-                   <pattern>servicios</pattern>
-                             <that>
-                           		Deseas conocer de nuestra Empresa o Servicios? Por favor escriba: Empresa o Servicios
-                              </that>
-                       <template>
-                           		Ofrecemos los siguientes servicios: <br/>
-                         		-Automatizacion.<br/>
-                         		-Customer Experience.<br/>
-                         		-Arquitectura Empresarial.<br/>
-                         		-Seguridad. <br/>
-                         		-Gestion Documental.<br/>
-                         		-Agile Integration.<br/>
-                         		Por favor escriba algunos de ellos.
-                        </template>
-              </category>
 
-               <category>
-                <pattern>servicios</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-           	<category>
-                <pattern>servicio</pattern>
-                     <that>
-             			Deseas conocer de nuestra Empresa o Servicios? Por favor escriba: Empresa o Servicios
-                     </that>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-               <category>
-                <pattern>servicio</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-
-               <category>
-                <pattern>servicios *</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-           	<category>
-                <pattern>servicio *</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-
-
-               <category>
-                <pattern>_ servicios *</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-           	<category>
-                <pattern>_ servicio *</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-
-
-               <category>
-                <pattern>_ servicios</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
-
-           	<category>
-                <pattern>_ servicio</pattern>
-                <template>
-             		Ofrecemos los siguientes servicios: <br/>
-           		-Automatizacion.<br/>
-           		-Customer Experience.<br/>
-           		-Arquitectura Empresarial.<br/>
-           		-Seguridad. <br/>
-           		-Gestion Documental.<br/>
-           		-Agile Integration.<br/>
-           		Por favor escriba algunos de ellos.
-                 </template>
-               </category>
 
          <category>
              <pattern>automatización</pattern>

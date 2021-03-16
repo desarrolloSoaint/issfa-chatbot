@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name="cb_historial")
+@Table(name = "cb_historial")
 @ApiModel("Modelo => Historial de Chat")
 public class CbHistorial {
 
@@ -31,26 +31,27 @@ public class CbHistorial {
     AcClientsPrivate id_client_private;
 
     @ApiModelProperty(value = "Campo question_client", required = true)
-    @Column(name="question_client")
+    @Column(name = "question_client")
     private String question_client;
 
+
     @ApiModelProperty(value = "Campo response_soniat", required = true)
-    @Column(name="response_soniat")
+    @Column(name = "response_soniat")
     private String response_soniat;
 
 
     @ApiModelProperty(value = "Campo time_question_client", required = true)
-    @Column(name="time_question_client")
+    @Column(name = "time_question_client")
     private Date time_question_client;
 
 
     @ApiModelProperty(value = "Campo time_response_soniat", required = true)
-    @Column(name="time_response_soniat")
+    @Column(name = "time_response_soniat")
     private Date time_response_soniat;
 
 
     @ApiModelProperty(value = "Campo expired_time", required = true)
-    @Column(name="expired_time")
+    @Column(name = "expired_time")
     private Date expired_time;
 
 //    public CbHistorial( Integer id,AcClients id_client,AcClientsPrivate id_client_private, String question_client, String response_soniat, Date time_question_client, Date time_response_soniat) {
@@ -64,12 +65,13 @@ public class CbHistorial {
 //    }
 
 
-
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) { this.id = id; }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public AcClients getId_client() {
         return id_client;
@@ -143,7 +145,9 @@ public class CbHistorial {
     }
 
     @Override
-    public int hashCode() { return Objects.hash(id, id_client, id_client_private,  question_client, response_soniat); }
+    public int hashCode() {
+        return Objects.hash(id, id_client, id_client_private, question_client, response_soniat);
+    }
 
     @Override
     public String toString() {

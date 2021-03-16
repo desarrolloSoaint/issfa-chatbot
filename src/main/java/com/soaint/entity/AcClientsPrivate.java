@@ -20,37 +20,66 @@ public class AcClientsPrivate {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @ApiModelProperty(value = "Campo cedula")
+    @Column(name="cedula")
+    private String cedula;
 
-    @NotNull
-    @ApiModelProperty(value = "Campo id_country")
-    @ManyToOne
-    @JoinColumn(name="id_country")
-    Country id_country;
+    @ApiModelProperty(value = "Campo fecha de nacimiento")
+    @Column(name="fecha_nacimiento")
+    private Date fechaNacimiento;
 
-    @NotNull
-    @Email
-    @ApiModelProperty(value = "Campo correo")
+    @ApiModelProperty(value = "Campo numero de dependiente registrado")
+    @Column(name="numero_dependiente")
+    private String numeroDependiente;
+
+    @ApiModelProperty(value = "Campo grupo sanguineo")
+    @Column(name="grupo_sanguineo")
+    private String grupoSanguineo;
+
+    @ApiModelProperty(value = "Campo numero de afiliacion")
+    @Column(name="numero_afiliacion")
+    private String numeroAfiliacion;
+
+    @ApiModelProperty(value = "Campo estado civil")
+    @Column(name="estado_civil")
+    private String estadoCivil;
+
+    @ApiModelProperty(value = "Campo tiempo de servicio")
+    @Column(name="tiempo_servicio")
+    private String tiempoServicio;
+
+    @ApiModelProperty(value = "Campo email")
     @Column(name="email")
     private String email;
 
-    @ApiModelProperty(value = "Campo password")
-    @Column(name="password")
-    private String password;
+    @ApiModelProperty(value = "Campo nombre de espos@")
+    @Column(name="nombre_parentesco")
+    private String nombreParent;
 
     @ApiModelProperty(value = "Campo de fecha creación")
     @Column(name="created_at")
     private Date created_at;
 
+    @ApiModelProperty(value = "Campo de fecha actualizacion")
+    @Column(name="update_at")
+    private Date update_at;
+
     public AcClientsPrivate() {
     }
 
-    public AcClientsPrivate(@NotNull String email, String password, Country id_country, Date created_at) {
+    public AcClientsPrivate(int id, Date fechaNacimiento, String numeroDependiente, String grupoSanguineo, String numeroAfiliacion, String estadoCivil, String tiempoServicio, String email, String nombreParent, Date created_at, Date update_at) {
+        this.id = id;
+        this.fechaNacimiento = fechaNacimiento;
+        this.numeroDependiente = numeroDependiente;
+        this.grupoSanguineo = grupoSanguineo;
+        this.numeroAfiliacion = numeroAfiliacion;
+        this.estadoCivil = estadoCivil;
+        this.tiempoServicio = tiempoServicio;
         this.email = email;
-        this.password = password;
+        this.nombreParent = nombreParent;
         this.created_at = created_at;
-        this.id_country = id_country;
+        this.update_at = update_at;
     }
-
 
     public int getId() {
         return id;
@@ -58,6 +87,62 @@ public class AcClientsPrivate {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getNumeroDependiente() {
+        return numeroDependiente;
+    }
+
+    public void setNumeroDependiente(String numeroDependiente) {
+        this.numeroDependiente = numeroDependiente;
+    }
+
+    public String getGrupoSanguineo() {
+        return grupoSanguineo;
+    }
+
+    public void setGrupoSanguineo(String grupoSanguineo) {
+        this.grupoSanguineo = grupoSanguineo;
+    }
+
+    public String getNumeroAfiliacion() {
+        return numeroAfiliacion;
+    }
+
+    public void setNumeroAfiliacion(String numeroAfiliacion) {
+        this.numeroAfiliacion = numeroAfiliacion;
+    }
+
+    public String getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public String getTiempoServicio() {
+        return tiempoServicio;
+    }
+
+    public void setTiempoServicio(String tiempoServicio) {
+        this.tiempoServicio = tiempoServicio;
     }
 
     public String getEmail() {
@@ -68,20 +153,12 @@ public class AcClientsPrivate {
         this.email = email;
     }
 
-    public Country getId_country() {
-        return id_country;
+    public String getNombreParent() {
+        return nombreParent;
     }
 
-    public void setId_country(Country id_country) {
-        this.id_country = id_country;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setNombreParent(String nombreParent) {
+        this.nombreParent = nombreParent;
     }
 
     public Date getCreated_at() {
@@ -92,28 +169,11 @@ public class AcClientsPrivate {
         this.created_at = created_at;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AcClientsPrivate ac_clients_private = (AcClientsPrivate) o;
-        return Objects.equals(id, ac_clients_private.id) &&
-                Objects.equals(id_country, ac_clients_private.id_country) &&
-                Objects.equals(email, ac_clients_private.email) &&
-                Objects.equals(password, ac_clients_private.password);
+    public Date getUpdate_at() {
+        return update_at;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, id_country, email, password);
-    }
-
-    @Override
-    public String toString() {
-        return "ClientPrivate{" +
-                ", id_country='" + id_country + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public void setUpdate_at(Date update_at) {
+        this.update_at = update_at;
     }
 }
