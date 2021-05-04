@@ -1,29 +1,29 @@
 package com.soaint.service;
 
+import com.soaint.DTO.ClientIssfaDTO;
+import com.soaint.DTO.GenericResponseDTO;
 import com.soaint.controller.ChatBotController;
+import com.soaint.controller.ClientsController;
 import com.soaint.entity.AcClients;
 import com.soaint.entity.AcClientsPrivate;
 import com.soaint.entity.CbHistorial;
 import com.soaint.repository.CbHistorialRepository;
 import com.soaint.utils.Colors;
-import org.alicebot.ab.*;
-import org.joda.time.DateTime;
+import org.alicebot.ab.Bot;
+import org.alicebot.ab.Chat;
+import org.alicebot.ab.MagicBooleans;
+import org.alicebot.ab.MagicStrings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.Timer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -32,6 +32,10 @@ public class ChatBotService {
 
     @Autowired
     CbHistorialRepository cbHistorialRepository;
+    @Autowired
+    private ClientsController clientsController;
+    @Autowired
+    ClientsService clientsService;
 
     private static final Logger logger = LoggerFactory.getLogger(ChatBotController.class);
 
@@ -39,12 +43,17 @@ public class ChatBotService {
     static String botName = "super";
     private Object ArrayList;
 
-    public String chatbotService(String answer, Object obj){
+    public String chatbotService(String answer, String cedula){
         String response = "";
 
-        System.out.println("AQUI: " + obj);
-
         try{
+
+            ResponseEntity<GenericResponseDTO> clientIssfa = clientsController.getByCedula(cedula);
+            ClientIssfaDTO clientIssfaDTO = (ClientIssfaDTO) clientIssfa.getBody().getObjectResponse();
+
+            //System.out.println("53 Servicios: " + clientIssfa.getBody().getObjectResponse());
+            //System.out.println("51 Servicio: "+ clientIssfaDTO.getCedula());
+
             String resourcePath = getResourcePath();
 
             // Todo: ************* Eliminar esto una vez probada en rest
@@ -67,34 +76,37 @@ public class ChatBotService {
                 // se comentó ya que el valor lo entrega rest
                 //textLine = IOUtils.readInputTextLine();
 
-                textLine = answer;
-                if((textLine == null ) || (textLine.length() < 1)){
-                    textLine = MagicStrings.null_input;
-                }
-                if (textLine.equals("q")) {
-                    System.exit(0);
-                }else if (textLine.equals("eq")){
-                    bot.writeQuit();
-                    System.exit(0);
-                }
-                else {
-                    String request = textLine;
-                    if (MagicBooleans.trace_mode){
-                        logger.info("STATE=" + request + ":THAT=" + (chatSession.thatHistory.get(0)).get(0) + ":TOPIC=" + chatSession.predicates.get("topic"));
-                    }
-                    response = chatSession.multisentenceRespond(request);
-                    while (response.contains("&lt;")) {
-                        response = response.replace("&lt;", "<");
-                    }//while
-                    while (response.contains("&gt;")){
-                        response = response.replace("&gt;", ">");
-                    }//while
+            textLine = answer;
 
-                    // Transform ISO-8859-1 to UTF-8
-                    //response = new String(response.getBytes("ISO-8859-1"), "UTF-8");
-                    logger.info("Soniat: " + response);
+            if(textLine.equals("cuando podria realizar un nuevo credito") || textLine.equals("Cuándo podría realizar un nuevo crédito")){
+                response = clientIssfaDTO.getNumeroDependiente();
+            }else if((textLine == null ) || (textLine.length() < 1)){
+                textLine = MagicStrings.null_input;
+            }else if (textLine.equals("q")) {
+                System.exit(0);
+            }else if (textLine.equals("eq")){
+                bot.writeQuit();
+                System.exit(0);
+            }
+            else {
+                String request = textLine;
+                if (MagicBooleans.trace_mode){
+                    logger.info("STATE=" + request + ":THAT=" + (chatSession.thatHistory.get(0)).get(0) + ":TOPIC=" + chatSession.predicates.get("topic"));
+                }
+                response = chatSession.multisentenceRespond(request);
+                while (response.contains("&lt;")) {
+                    response = response.replace("&lt;", "<");
+                }//while
+                while (response.contains("&gt;")){
+                    response = response.replace("&gt;", ">");
+                }//while
 
-                }//else
+                // Transform ISO-8859-1 to UTF-8
+                //response = new String(response.getBytes("ISO-8859-1"), "UTF-8");
+                logger.info("Soniat: " + response);
+
+            }//else
+
             //}//while(true)
 
         }catch (Exception e){
@@ -536,8 +548,5 @@ public class ChatBotService {
         Long lista = cbHistorialRepository.CountToday();
         return lista;
     }
-
-
-
 
 }

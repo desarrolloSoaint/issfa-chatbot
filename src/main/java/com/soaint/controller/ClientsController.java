@@ -2,7 +2,10 @@ package com.soaint.controller;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.soaint.DTO.ClientIssfaDTO;
+import com.soaint.DTO.GenericResponseDTO;
 import com.soaint.DTO.Mensaje;
+import com.soaint.converter.ClientIssfaConverter;
 import com.soaint.entity.AcClients;
 import com.soaint.entity.AcClientsPrivate;
 import com.soaint.repository.AcClientsPrivateRepository;
@@ -10,6 +13,7 @@ import com.soaint.repository.AcClientsRepository;
 import com.soaint.service.ClientsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
@@ -25,26 +29,38 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/clients")
 @Api(tags = "CLIENTS")
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class ClientsController {
+
+    private final ClientIssfaConverter clientIssfaConverter;
+    private final ModelMapper modelMapper;
+    private final AcClientsPrivateRepository acClientsPrivateRepository;
+    private final AcClientsRepository acClientsRepository;
 
     @Autowired
     ClientsService clientsService;
     @Autowired
-    private AcClientsRepository acClientsRepository;
-    @Autowired
-    private AcClientsPrivateRepository acClientsPrivateRepository;
-    @Autowired
     PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public ClientsController(ClientIssfaConverter clientIssfaConverter, ModelMapper modelMapper, AcClientsPrivateRepository acClientsPrivateRepository, AcClientsRepository acClientsRepository) {
+        this.clientIssfaConverter = clientIssfaConverter;
+        this.modelMapper = modelMapper;
+        this.acClientsPrivateRepository = acClientsPrivateRepository;
+        this.acClientsRepository = acClientsRepository;
+    }
 
     //Get todos los Registros de los Clientes Publicos
     @GetMapping("/registros")
     @ApiOperation(value = "Data de Registro de Cliente Publicos", notes = "Todos los Registros")
-    public List<AcClients> findAll(){ return clientsService.obtenerTodos(); }
+    public List<AcClients> findAll() {
+        return clientsService.obtenerTodos();
+    }
 
     //Get para Search(Busqueda) email estilo Json de los Clientes Publicos
     @GetMapping("/find-all-search")
@@ -122,20 +138,20 @@ public class ClientsController {
     //Get por Id registro de los Clientes Publicos
     @GetMapping("/{id}")
     @ApiOperation(value = "Busca Registro de un Cliente Publico por Id", notes = "Devuelve los datos relativos a un cliente publico")
-    public ResponseEntity<AcClients> getOne(@PathVariable Integer id){
-        if(!clientsService.existePorId(id))
+    public ResponseEntity<AcClients> getOne(@PathVariable Integer id) {
+        if (!clientsService.existePorId(id))
             return new ResponseEntity(new Mensaje("No existe ese cliente"), HttpStatus.NOT_FOUND);
         AcClients clients = clientsService.obtenerPorId(id).get();
-        return new ResponseEntity<AcClients>(clients, HttpStatus.OK);
+        return new ResponseEntity(clients, HttpStatus.OK);
     }
 
     //Save Registro Cliente Publico
     @PostMapping("/create-public")
     @ApiOperation(value = "Registra un Cliente Publico", notes = "Crea un nuevo cliente publico a partir de pais y un email. El email no debe existir")
-    public ResponseEntity<?> create(@Valid @RequestBody AcClients acClients, BindingResult bindingResult){
-        if(bindingResult.hasErrors())
+    public ResponseEntity<?> create(@Valid @RequestBody AcClients acClients, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos errados o email invalido"), HttpStatus.BAD_REQUEST);
-        if(clientsService.existePorEmail(acClients.getEmail()))
+        if (clientsService.existePorEmail(acClients.getEmail()))
             return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
         clientsService.guardar(acClients);
         return new ResponseEntity(new Mensaje("Cliente registrado."), HttpStatus.CREATED);
@@ -143,8 +159,8 @@ public class ClientsController {
 
     @PostMapping("/create")
     @ApiOperation(value = "Acceso a Clientes Publicos", notes = "Crea un nuevo cliente publico a partir de pais y un email")
-    public ResponseEntity<?> createpublic(@Valid @RequestBody AcClients acClients, BindingResult bindingResult){
-        if(bindingResult.hasErrors())
+    public ResponseEntity<?> createpublic(@Valid @RequestBody AcClients acClients, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos errados o email invalido"), HttpStatus.BAD_REQUEST);
         clientsService.guardar(acClients);
         return new ResponseEntity(new Mensaje("Cliente registrado."), HttpStatus.CREATED);
@@ -153,12 +169,12 @@ public class ClientsController {
     //Update Registro Cliente Publico
     @PutMapping("/update/{id}")
     @ApiOperation(value = "Actualiza los Datos de Registro de un Cliente Publico por Id", notes = "Actualiza los datos del cliente que se corresponda con el id. El cliente debe existir")
-    public ResponseEntity<?> update(@Valid @RequestBody AcClients acClients,BindingResult bindingResult, @PathVariable("id") Integer id){
-        if(bindingResult.hasErrors())
+    public ResponseEntity<?> update(@Valid @RequestBody AcClients acClients, BindingResult bindingResult, @PathVariable("id") Integer id) {
+        if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos errados o email invalido"), HttpStatus.BAD_REQUEST);
-        if(!clientsService.existePorId(id))
+        if (!clientsService.existePorId(id))
             return new ResponseEntity(new Mensaje("No existe el cliente"), HttpStatus.NOT_FOUND);
-        if(clientsService.existePorEmail(acClients.getEmail()) &&
+        if (clientsService.existePorEmail(acClients.getEmail()) &&
                 clientsService.getByEmail(acClients.getEmail()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
         AcClients acClientsUpdate = clientsService.obtenerPorId(id).get();
@@ -171,8 +187,8 @@ public class ClientsController {
     //Delete Registro Cliente Publico
     @DeleteMapping("/delete/{id}")
     @ApiOperation(value = "Elimina Registro de un Cliente Publico por Id", notes = "Elimina los datos del cliente que se corresponda con el id. El cliente debe existir")
-    public ResponseEntity<?> delete(@PathVariable Integer id){
-        if(!clientsService.existePorId(id))
+    public ResponseEntity<?> delete(@PathVariable Integer id) {
+        if (!clientsService.existePorId(id))
             return new ResponseEntity(new Mensaje("No existe el cliente"), HttpStatus.NOT_FOUND);
         clientsService.borrar(id);
         return new ResponseEntity(new Mensaje("Cliente eliminado"), HttpStatus.OK);
@@ -181,40 +197,43 @@ public class ClientsController {
     //Get Correos de los Registros de los Clientes Publicos
     @GetMapping("/list-client-public")
     @ApiOperation(value = "Devuelve Correos de los Clientes Publicos Registrados", notes = "Muestra los Correos de los Clientes Publicos")
-    public List<AcClients> ClientsPublic(){ return clientsService.ClientsPublic(); }
+    public List<AcClients> ClientsPublic() {
+        return clientsService.ClientsPublic();
+    }
 
     //Get Conteo de los Registros de los Clientes Publicos
     @GetMapping("/count-client-public")
     @ApiOperation(value = "Devuelve la Cantidad de Clientes Publicos Registrados", notes = "Muestra la cantidad de Clientes Publicos")
-    public Object ClientsPublicCount(){
+    public Object ClientsPublicCount() {
         Long lista = clientsService.ClientsPublicCount();
-        return lista;}
+        return lista;
+    }
 
     @GetMapping("/count-week-client-public")
     @ApiOperation(value = "Devuelve la cantidad de clientes públicos registrados de la última semana", notes = "Muestra la cantidad de Clientes públicos registrados en la última semana")
-    public Object ClientsPublicCountWeek(){
+    public Object ClientsPublicCountWeek() {
         return clientsService.ClientePublicCountLastWeek();
     }
 
     @GetMapping("/count-day-client-public")
     @ApiOperation(value = "Devuelve la cantidad de clientes públicos registrados en el último dia", notes = "Muestra la cantidad de clientes públicos registrados en el último dia")
-    public Object ClientsPublicCountDay(){
+    public Object ClientsPublicCountDay() {
         return clientsService.ClientePublicCountLastDay();
     }
-
-
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////CONTROLADORES DE CLIENTES PRIVADOS
 
 
-//    ME TRAE TODO LOS REGISTROS DE LA BASE DE DATOS
+    //    ME TRAE TODO LOS REGISTROS DE LA BASE DE DATOS
 
     //Get todos los Registros de los Clientes Privados
     @GetMapping("/registros/private")
     @ApiOperation(value = "Devuelve la Data de Registros de los Clientes Privados", notes = "Todos los registros de clientes privados")
-    public List<AcClientsPrivate> findAll1(){ return clientsService.obtenerTodosPrivados(); }
+    public List<AcClientsPrivate> findAll1() {
+        return clientsService.obtenerTodosPrivados();
+    }
 
     //Get para Search(Busqueda) email estilo Json de los Clientes Privados
     @GetMapping("/find-all-searchPrivate")
@@ -292,18 +311,52 @@ public class ClientsController {
     //ME TRAE UN REGISTRO POR ID DE LA BASE DE DATOS
     @GetMapping("/private/{id}")
     @ApiOperation(value = "Busca Registro de un Cliente Privado por Id", notes = "Devuelve los datos relativos a un cliente privado")
-    public ResponseEntity<AcClientsPrivate> getOnePrivate(@PathVariable Integer id){
-        if(!clientsService.existePorIdPrivate(id))
+    public ResponseEntity<AcClientsPrivate> getOnePrivate(@PathVariable Integer id) {
+        if (!clientsService.existePorIdPrivate(id))
             return new ResponseEntity(new Mensaje("No existe ese cliente privado"), HttpStatus.NOT_FOUND);
         AcClientsPrivate clientsPrivate = clientsService.obtenerPorIdPrivate(id).get();
         return new ResponseEntity<AcClientsPrivate>(clientsPrivate, HttpStatus.OK);
     }
 
+    @GetMapping("/private/")
+    @ApiOperation(value = "Busca por cedula un cliente privado.", notes = "Devuelve un cliente privado por cedula.")
+    public ResponseEntity<GenericResponseDTO> getByCedula(@RequestParam String cedula) {
+
+        try {
+
+            Optional<AcClientsPrivate> optionalAcClientsPrivate = clientsService.getByCedula(cedula);
+            ClientIssfaDTO clientIssfaDTO = new ClientIssfaDTO();
+            String message = "Cédula no encontrada.";
+
+            if (optionalAcClientsPrivate.isPresent()) {
+                //System.out.println("ClienteController: " + optionalAcClientsPrivate.get());
+                AcClientsPrivate clientIssfaDAO = optionalAcClientsPrivate.get();
+                clientIssfaDTO = clientIssfaConverter.convertirClientIssfaDAOtoDTO(clientIssfaDAO, modelMapper);
+                message = "Cédula encontrada.";
+            }
+
+            return new ResponseEntity(GenericResponseDTO.builder()
+                    .message(message)
+                    .objectResponse(clientIssfaDTO)
+                    .statusCode(HttpStatus.OK.value())
+                    .build(), HttpStatus.CREATED);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity(GenericResponseDTO.builder()
+                    .message("Se genero un error: " + e.getMessage())
+                    .objectResponse(null)
+                    .statusCode(HttpStatus.OK.value())
+                    .build(), HttpStatus.CREATED);
+        }
+
+    }
+
     //Save acceso Cliente Privado
     @PostMapping("/acces-private")
     @ApiOperation(value = "Acceso un Cliente Privado", notes = "Accesa un nuevo cliente privado a partir de pais y un email. El email no debe existir")
-    public ResponseEntity<?> accesPrivate(@Valid @RequestBody AcClientsPrivate acClientsPrivate, BindingResult bindingResult){
-        if(bindingResult.hasErrors())
+    public ResponseEntity<?> accesPrivate(@Valid @RequestBody AcClientsPrivate acClientsPrivate, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos errados o email invalido"), HttpStatus.BAD_REQUEST);
         clientsService.savePrivado(acClientsPrivate);
         return new ResponseEntity(new Mensaje("Cliente registrado."), HttpStatus.CREATED);
@@ -312,10 +365,10 @@ public class ClientsController {
     //REGISTRO DE NUEVO CLIENTE PRIVADO
     @PostMapping("/create/private")
     @ApiOperation(value = "Registro de Cliente Privado", notes = "Crea un nuevo cliente a partir de pais, un email y el Password. El email no debe existir")
-    public ResponseEntity<?> createPrivate(@Valid @RequestBody AcClientsPrivate acClientsPrivate, BindingResult bindingResult){
-        if(bindingResult.hasErrors())
+    public ResponseEntity<?> createPrivate(@Valid @RequestBody AcClientsPrivate acClientsPrivate, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos errados o email invalido"), HttpStatus.BAD_REQUEST);
-        if(clientsService.existePorEmailPrivado(acClientsPrivate.getEmail()))
+        if (clientsService.existePorEmailPrivado(acClientsPrivate.getEmail()))
             return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
 
 //        AcClientsPrivate acClientsPrivate1 =
@@ -333,12 +386,12 @@ public class ClientsController {
     //ACTUALIZA UN CLIENTE PRIVADO
     @PutMapping("/update/private/{id}")
     @ApiOperation(value = "Actualiza los Datos de Registro de un Cliente Privado por Id", notes = "Actualiza los datos del cliente que se corresponda con el id. El cliente debe existir")
-    public ResponseEntity<?> updatePrivate(@Valid @RequestBody AcClientsPrivate acClientsPrivate,BindingResult bindingResult, @PathVariable("id") Integer id){
-        if(bindingResult.hasErrors())
+    public ResponseEntity<?> updatePrivate(@Valid @RequestBody AcClientsPrivate acClientsPrivate, BindingResult bindingResult, @PathVariable("id") Integer id) {
+        if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos errados o email invalido"), HttpStatus.BAD_REQUEST);
-        if(!clientsService.existePorIdPrivate(id))
+        if (!clientsService.existePorIdPrivate(id))
             return new ResponseEntity(new Mensaje("No existe el cliente"), HttpStatus.NOT_FOUND);
-        if(clientsService.existePorEmailPrivado(acClientsPrivate.getEmail()) &&
+        if (clientsService.existePorEmailPrivado(acClientsPrivate.getEmail()) &&
                 clientsService.getByEmailPrivado(acClientsPrivate.getEmail()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Ese email ya existe"), HttpStatus.BAD_REQUEST);
         AcClientsPrivate acClientsPrivateUpdate = clientsService.obtenerPorIdPrivate(id).get();
@@ -353,8 +406,8 @@ public class ClientsController {
     //ELIMINA CLIENTE PRIVADO
     @DeleteMapping("/delete/private/{id}")
     @ApiOperation(value = "Elimina Registro de un Cliente Privado por Id", notes = "Elimina los datos del cliente privado que se corresponda con el id. El cliente debe existir")
-    public ResponseEntity<?> deletePrivate(@PathVariable Integer id){
-        if(!clientsService.existePorIdPrivate(id))
+    public ResponseEntity<?> deletePrivate(@PathVariable Integer id) {
+        if (!clientsService.existePorIdPrivate(id))
             return new ResponseEntity(new Mensaje("No existe el cliente"), HttpStatus.NOT_FOUND);
         clientsService.borrarPrivado(id);
         return new ResponseEntity(new Mensaje("Cliente eliminado"), HttpStatus.OK);
@@ -363,23 +416,26 @@ public class ClientsController {
     //Get Correos de los Registros de los Clientes Privados
     @GetMapping("/list-client-private")
     @ApiOperation(value = "Devuelve Correos de los Clientes Privados Registrados", notes = "Muestra los Correos de los Clientes Privados")
-    public List<AcClientsPrivate> ClientsPrivate(){ return clientsService.ClientsPrivate(); }
+    public List<AcClientsPrivate> ClientsPrivate() {
+        return clientsService.ClientsPrivate();
+    }
 
     @GetMapping("/count-client-private")
     @ApiOperation(value = "Devuelve la Cantidad de Clientes Privados Registrados", notes = "Muestra la cantidad de Clientes Privados")
-    public Object ClientsPrivateCount(){
+    public Object ClientsPrivateCount() {
         Long lista = clientsService.ClientsPrivateCount();
-        return lista;}
+        return lista;
+    }
 
     @GetMapping("/count-week-client-private")
     @ApiOperation(value = "Devuelve la cantidad de clientes privados registrados de la última semana", notes = "Muestra la cantidad de clientes privados registrados en la última semana")
-    public Object ClientsPrivateCountWeek(){
+    public Object ClientsPrivateCountWeek() {
         return clientsService.ClientePrivadoCountLastWeek();
     }
 
     @GetMapping("/count-day-client-private")
     @ApiOperation(value = "Devuelve la cantidad de clientes privados registrados en el último dia", notes = "Muestra la cantidad de clientes privados registrados en el último dia")
-    public Object ClientsPrivateCountDay(){
+    public Object ClientsPrivateCountDay() {
         return clientsService.ClientePrivadoCountLastDay();
     }
 

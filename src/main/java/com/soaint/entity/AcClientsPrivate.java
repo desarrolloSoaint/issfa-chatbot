@@ -1,19 +1,29 @@
 package com.soaint.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
-import java.util.Objects;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "parent"})
 @Entity
 @Table(name="ac_clients_private")
 @ApiModel("Modelo => Cliente Privado")
-public class AcClientsPrivate {
+public class AcClientsPrivate implements Serializable {
 
     @Id
     @ApiModelProperty(value = "Campo id autoincrementable")
@@ -63,23 +73,6 @@ public class AcClientsPrivate {
     @ApiModelProperty(value = "Campo de fecha actualizacion")
     @Column(name="update_at")
     private Date update_at;
-
-    public AcClientsPrivate() {
-    }
-
-    public AcClientsPrivate(int id, Date fechaNacimiento, String numeroDependiente, String grupoSanguineo, String numeroAfiliacion, String estadoCivil, String tiempoServicio, String email, String nombreParent, Date created_at, Date update_at) {
-        this.id = id;
-        this.fechaNacimiento = fechaNacimiento;
-        this.numeroDependiente = numeroDependiente;
-        this.grupoSanguineo = grupoSanguineo;
-        this.numeroAfiliacion = numeroAfiliacion;
-        this.estadoCivil = estadoCivil;
-        this.tiempoServicio = tiempoServicio;
-        this.email = email;
-        this.nombreParent = nombreParent;
-        this.created_at = created_at;
-        this.update_at = update_at;
-    }
 
     public int getId() {
         return id;

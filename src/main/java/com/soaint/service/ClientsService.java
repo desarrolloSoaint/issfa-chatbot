@@ -26,7 +26,8 @@ public class ClientsService {
     //SERVICIOS PARA LA TABLA AC_CLIENTSB (PUBLICOS)
 
     //Obtiene todos los clientes publicos
-    public List<AcClients> obtenerTodos(){ List<AcClients> lista = acClientsRepository.findAll();
+    public List<AcClients> obtenerTodos(){
+        List<AcClients> lista = acClientsRepository.findAll();
         return lista;
     }
     //Verificar si existe ese ID que se consulta.
@@ -101,6 +102,16 @@ public class ClientsService {
 
     //Email
     public Optional<AcClientsPrivate> getByEmailPrivado(String email){ return acClientsPrivateRepository.findByEmail(email); }
+
+    //Obtener cedula
+    public Optional<AcClientsPrivate> getByCedula(String cedula){
+        return acClientsPrivateRepository.findByCedula(cedula);
+    }
+
+    //Existe por cedula
+    public boolean existByCedula(String cedula){
+        return acClientsPrivateRepository.existsByCedula(cedula);
+    }
 
     //Registra nuevo cliente privado
     public void savePrivado(AcClientsPrivate acClientsPrivate){

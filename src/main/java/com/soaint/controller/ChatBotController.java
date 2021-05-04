@@ -1,5 +1,7 @@
 package com.soaint.controller;
 
+import com.soaint.DTO.ClientIssfaDTO;
+import com.soaint.DTO.GenericResponseDTO;
 import com.soaint.entity.AcClients;
 import com.soaint.entity.AcClientsPrivate;
 import com.soaint.entity.CbHistorial;
@@ -11,6 +13,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,13 +52,14 @@ public class ChatBotController {
     @ApiOperation(value = "Conversacion con el Chat en Modo Publico", notes = "Aqui se recibe el mensaje por el usuario publico obteniendo su respuesta a traves de los AIML")
     public Object botPublico(
             @ApiParam(value = "Escribe el mensaje que se le enviara al Chat" , required = true)@RequestParam String question,
-            @ApiParam(value = "id_client_public" , required = false) AcClients client) {
+            @ApiParam(value = "id_client_public" , required = false) AcClients client,
+            @ApiParam(value = "Campo cedula del ClientIssfa", required = false)@RequestParam String cedula ) {
 
         Date dateQuestion = new Date();
-        Object objClient = client;
-        String x = chatBotService.chatbotService(question, objClient);
-        Date dateResponse = new Date();
 
+        String x = chatBotService.chatbotService(question, cedula);
+
+        Date dateResponse = new Date();
         CbHistorial chat = new CbHistorial();
 
         chat.setId_client(client);
