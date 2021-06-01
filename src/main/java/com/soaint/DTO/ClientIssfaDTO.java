@@ -17,7 +17,7 @@ public class ClientIssfaDTO {
 
     private String cedula;
     private String email;
-    private Date fechaNacimiento;
+    private String fechaNacimiento;
     private String numeroDependiente;
     private String grupoSanguineo;
     private String numeroAfiliacion;

@@ -9,6 +9,9 @@ insert into users (id, email, password, created_at) values (1, 'admin@chatbot.co
 insert into rol (id, rol_name) values (1, 'ROLE_ADMIN');
 insert into rol (id, rol_name) values (2, 'ROLE_USER');
 
+-- Insercion de cliente
+insert into ac_clients_private (id, cedula, fecha_nacimiento, numero_dependiente, grupo_sanguineo, numero_afiliacion, estado_civil, tiempo_servicio, email, nombre_parentesco, created_at, update_at) values (1, '12345678', '01/01/1990', '12345', 'O+', '1', 'soltero', '10', 'soaint@soaint.com', 'ninguno', now(), null);
+
 --Asignar rol a usuario para chatbot
 insert into users_rol (users_id, rol_id) values ( 1, 1);
 
